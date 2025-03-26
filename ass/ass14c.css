@@ -1,0 +1,60 @@
+/* C++ Code to Turn ON/OFF Buzzer Using Arduino:
+Here is a simple C++ program for the Arduino Uno that will turn the buzzer ON for 3 seconds, then turn it OFF for 3 seconds, repeating this cycle indefinitely.
+
+*/
+// Define the pin connected to the Buzzer
+int buzzerPin = 9;  // Pin 9 is connected to the Buzzer
+
+void setup() {
+  // Initialize the buzzer pin as an OUTPUT pin
+  pinMode(buzzerPin, OUTPUT);
+}
+
+void loop() {
+  // Turn ON the Buzzer
+  digitalWrite(buzzerPin, HIGH);
+  Serial.println("Buzzer is ON");
+  delay(3000); // Wait for 3 seconds (3000 milliseconds)
+
+  // Turn OFF the Buzzer
+  digitalWrite(buzzerPin, LOW);
+  Serial.println("Buzzer is OFF");
+  delay(3000); // Wait for 3 seconds (3000 milliseconds)
+}
+/* Explanation of the Code:
+Pin Definition:
+We define Pin 9 for the buzzer (int buzzerPin = 9;). This is the pin where the buzzer is connected.
+
+Setup Function (setup()):
+
+The pinMode(buzzerPin, OUTPUT) sets the buzzer pin (Pin 9) as an output pin.
+
+Loop Function (loop()):
+
+The digitalWrite(buzzerPin, HIGH) turns ON the buzzer by sending a high voltage (5V) to Pin 9.
+
+The digitalWrite(buzzerPin, LOW) turns OFF the buzzer by sending 0V (ground) to Pin 9.
+
+The delay(3000) pauses the execution for 3 seconds (3000 milliseconds) before toggling the buzzer again.
+
+Serial Output:
+The Serial.println() statements print messages to the serial monitor, which allows you to see when the buzzer is ON and OFF.
+
+3. Observations on Input and Output:
+Input:
+
+No direct user input is required in this example. The program runs continuously.
+
+Output:
+
+The buzzer will turn ON for 3 seconds and then turn OFF for the next 3 seconds.
+
+The Serial Monitor will display the messages "Buzzer is ON" and "Buzzer is OFF" every 3 seconds.
+
+4. Result:
+The Arduino Uno successfully controls the buzzer, turning it ON for 3 seconds and OFF for 3 seconds in a continuous cycle.
+
+5. Conclusion:
+By using C++ with Arduino Uno, you can control simple devices such as buzzers based on certain conditions.
+
+This basic example demonstrates how to manipulate hardware components (like buzzers) in real-time, which is fundamental for building embedded systems and microcontroller-based projects. */
